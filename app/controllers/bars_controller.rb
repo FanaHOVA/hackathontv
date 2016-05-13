@@ -1,8 +1,6 @@
 class BarsController < ApplicationController
   before_action :set_bar, only: [:show, :update, :destroy]
 
-  # GET /bars
-  # GET /bars.json
   def index
     @bars = Bar.all
   end
@@ -10,6 +8,7 @@ class BarsController < ApplicationController
   # GET /bars/1
   # GET /bars/1.json
   def show
+    @leaderboard = @bar.leaderboard
   end
 
   # POST /bars

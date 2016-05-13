@@ -4,9 +4,13 @@ class Bar < ApplicationRecord
   def leaderboard
     leaderboard = {}
     game_bets.each do |bet|
-      leaderboard[bet.user.id] += 1 if bet.check_winner
+      mail_symbol = bet.user.email
+      if leaderboard[mail_symbol]
+        leaderboard[mail_symbol] += 1 if bet.check_winner
+      else
+        leaderboard[mail_symbol] = 1
+      end
     end
-
-    leaderboard.to_json
+    leaderboard
   end
 end

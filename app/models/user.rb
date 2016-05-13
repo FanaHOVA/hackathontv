@@ -5,4 +5,5 @@ class User < ApplicationRecord
   include ActionController::Serialization
 
   belongs_to :nation
+  has_many :game_bets
 end

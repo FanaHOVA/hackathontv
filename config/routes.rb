@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :bars
-  resources :sport_events, defaults: { format: 'json' }
-  resources :nations, defaults: { format: 'json' }
-
+  resources :game_bets
+  resources :sport_events
+  resources :nations
+  resources :users, only: [:show]
+  
   devise_for :users
 end

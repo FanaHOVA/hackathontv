@@ -1,0 +1,6 @@
+<%= @user.name %> <br><br>
+
+<% @user.game_bets.each do |bet| %>
+  <% team = Nation.find(bet.winner_id) %>
+  <%= team.name %> vincera' la competizione di <%= bet.sport_event.name %> <br>
+<% end %>
