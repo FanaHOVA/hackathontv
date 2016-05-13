@@ -1,3 +1,2 @@
 class SportEvent < ApplicationRecord
-  
 end

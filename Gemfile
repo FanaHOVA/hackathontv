@@ -11,6 +11,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise', github: 'plataformatec/devise', branch: 'master'
+gem 'active_model_serializers'
+gem 'rack-cors'
 
 group :development, :test do
   gem 'byebug'

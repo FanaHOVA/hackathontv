@@ -36,6 +36,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_model_serializers (0.9.5)
+      activemodel (>= 3.2)
     activejob (5.0.0.rc1)
       activesupport (= 5.0.0.rc1)
       globalid (>= 0.3.6)
@@ -96,6 +98,7 @@ GEM
     pg (0.18.4)
     rack (2.0.0.rc1)
       json
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.rc1)
@@ -171,11 +174,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
   byebug
   devise!
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.15)
+  rack-cors
   rails (~> 5.0.0.rc1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
