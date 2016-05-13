@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: hackathontv_production
-  username: hackathontv
+  username: giulia
   password: <%= ENV['HACKATHONTV_DATABASE_PASSWORD'] %>

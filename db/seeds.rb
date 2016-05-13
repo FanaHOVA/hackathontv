@@ -1,1 +1,22 @@
+Nation.create(name: 'Italia')
+Nation.create(name: 'Spagna')
+Nation.create(name: 'Francia')
+Nation.create(name: 'Brasile')
+Nation.create(name: 'Russia')
+Nation.create(name: 'Cina')
+Nation.create(name: 'Messico')
+Nation.create(name: 'Estonia')
 
+SportEvent.create(name:'100 metri', location:'Foro Italico', sport:'Atletica Leggera', time: '18:10')
+SportEvent.create(name:'Salto in lungo', location:'Tor Vergata', sport:'Atletica Leggera', time: '20:30')
+SportEvent.create(name:'Salto in alto', location:'Nuova Fiera di Roma', sport:'Atletica Leggera', time: '19:15')
+SportEvent.create(name:'400 m stile libero',location:'Tor Vergata', sport:'Nuoto', time:'10:30')
+SportEvent.create(name:'100 m rana',location:'Foro Italico', sport:'Nuoto', time:'10:00')
+SportEvent.create(name:'200 m misti',location:'Nuova Fiera di Roma', sport:'Nuoto', time: '15:20')
+
+User.create(name:'Michele', email:'michele@gmail.com', password:'password_1', password_confirmation:'password_1' )
+User.create(name:'Luca', email:'luca@gmail.com', password:'password_2', password_confirmation:'password_2')
+
+Bar.create(name:'Bar Rosso', address:'Via della Ricerca Scientifica 1', phone:'012345', email:'bar_rosso@gmail.com')
+Bar.create(name:'Roxy Bar', address:'Via dei girasoli 2', phone:'056471', email:'roxy_bar@gmail.com')
+Bar.create(name:'Da Mario', address:'Via delle nespole 3', phone:'019845', email:'da_mario@gmail.com')
