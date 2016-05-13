@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160513174226) do
+ActiveRecord::Schema.define(version: 20160513192039) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bars", force: :cascade do |t|
+    t.string   "address"
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "game_bets", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "sport_event_id"
+    t.integer  "winner_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "bar_id"
+  end
 
   create_table "nations", force: :cascade do |t|
     t.string   "name"
@@ -27,8 +45,10 @@ ActiveRecord::Schema.define(version: 20160513174226) do
     t.string   "location"
     t.string   "sport"
     t.datetime "time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "nations_ids",              array: true
+    t.integer  "winner_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,6 +64,7 @@ ActiveRecord::Schema.define(version: 20160513174226) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "nation_id"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
