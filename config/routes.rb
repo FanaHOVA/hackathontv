@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'users#index'
+
   resources :bars
   resources :game_bets
   resources :sport_events

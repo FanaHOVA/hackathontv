@@ -1,4 +1,4 @@
-<%= @user.name %> <br><br>
+<%= @user.name %> <%= image_tag @user.nation.flag_url, {style: 'max-width: 50px'}%> <br><br>
 
 <% @user.game_bets.each do |bet| %>
   <% team = Nation.find(bet.winner_id) %>

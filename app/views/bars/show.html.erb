@@ -4,5 +4,6 @@
 </p>
 <br>
 <% @leaderboard.first(3).each do |key, value| %>
-  <%= link_to key %>: <%= value %><br>
+  <% user = User.find_by(name: key) %>
+  <%= link_to key, user_path(user) %>: <%= value %><br>
 <% end %>
