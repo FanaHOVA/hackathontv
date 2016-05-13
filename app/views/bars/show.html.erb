@@ -3,6 +3,6 @@
   <%= @bar.address %>
 </p>
 <br>
-<% @leaderboard.each do |key, value| %>
-  <%= key %>: <%= value %><br>
+<% @leaderboard.first(3).each do |key, value| %>
+  <%= link_to key %>: <%= value %><br>
 <% end %>

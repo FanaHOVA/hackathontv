@@ -14,8 +14,8 @@ SportEvent.create(winner_id: 2, name: '400 m stile libero', location: 'Tor Verga
 SportEvent.create(winner_id: 1, name: '100 m rana', location: 'Foro Italico', sport: 'Nuoto')
 SportEvent.create(winner_id: 3, name: '200 m misti', location: 'Nuova Fiera di Roma', sport: 'Nuoto')
 
-User.create(name: 'Michele', nation_id: 1, email: 'michele@gmail.com', password: 'password_1', password_confirmation: 'password_1')
-User.create(name: 'Luca', nation_id: 2, email: 'luca@gmail.com', password: 'password_2', password_confirmation: 'password_2')
+User.create(name: 'Michele A.', nation_id: 1, email: 'michele@gmail.com', password: 'password_1', password_confirmation: 'password_1')
+User.create(name: 'Luca B.', nation_id: 2, email: 'luca@gmail.com', password: 'password_2', password_confirmation: 'password_2')
 
 Bar.create(name: 'Bar Rosso', address: 'Via della Ricerca Scientifica 1', phone: '012345', email: 'bar_rosso@gmail.com')
 Bar.create(name: 'Roxy Bar', address: 'Via Dei Girasoli 2', phone: '056471', email: 'roxy_bar@gmail.com')

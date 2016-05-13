@@ -8,7 +8,7 @@ class BarsController < ApplicationController
   # GET /bars/1
   # GET /bars/1.json
   def show
-    @leaderboard = @bar.leaderboard
+    @leaderboard = @bar.top_three
   end
 
   # POST /bars
