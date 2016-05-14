@@ -11,10 +11,6 @@ class Bar < ApplicationRecord
         leaderboard[mail_symbol] = 1
       end
     end
-    leaderboard
-  end
-
-  def top_three
-    leaderboard.sort_by { |_key, value| value }.reverse.first(3)
+    leaderboard.sort_by { |_key, value| value }.reverse
   end
 end

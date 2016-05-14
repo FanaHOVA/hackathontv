@@ -8,7 +8,8 @@ class BarsController < ApplicationController
   # GET /bars/1
   # GET /bars/1.json
   def show
-    @leaderboard = @bar.top_three
+    @leaderboard = @bar.leaderboard
+    @flag = Nation.find(@bar.nation_id).flag_url
   end
 
   # POST /bars
