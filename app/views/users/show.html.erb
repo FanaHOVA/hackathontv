@@ -1,6 +1,62 @@
-<%= @user.name %> <%= image_tag @user.nation.flag_url, {style: 'max-width: 50px'}%> <br><br>
 
 <% @user.game_bets.each do |bet| %>
   <% team = Nation.find(bet.winner_id) %>
   <%= team.name %> vincera' la competizione di <%= bet.sport_event.name %> <br>
 <% end %>
+
+<style>
+body {
+  background: black;
+}
+
+.background {
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(<%= @user.nation.flag_url %>);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    opacity: 0.4;
+    filter:alpha(opacity=40);
+}
+
+</style>
+
+<div class='background'>
+</div>
+<div class='row'>
+<div class='col-sm-6'>
+  <center><h1 style='color: white; font-size: 150px'><%= @user.name %></h1>
+  <h2 style='color: white;'>Forza <%= @user.nation.name %>!</h2></center>
+  <div class='row' style='color: white'>
+    <div class='col-sm-1'>
+
+    </div>
+    <div class='col-sm-3'>
+      <center><i class="fa fa-2x fa-facebook"></i>
+      <br>
+      Haia Balar</center>
+    </div>
+    <div class='col-sm-3'>
+      <center>
+      <i class="fa fa-2x fa-twitter"></i><br>
+      @HaiaBaba
+    </center>
+    </div>
+    <div class='col-sm-3'>
+      <center>
+      <i class="fa fa-2x fa-envelope"></i><br>
+      haiab@gmail.com
+    </center>
+    </div>
+  </div>
+  <br>
+</div>
+
+<div class='col-sm-6' style='padding-left: 0px; padding-right: 0px'>
+
+</div>
+</div>

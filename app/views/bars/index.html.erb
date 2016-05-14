@@ -1,3 +1,21 @@
-<% @bars.each do |bar| %>
-  <%= bar.name %> in <%= bar.address %> | <%= bar.phone %> <br>
-<% end %>
+<style>
+
+button {
+  border: none;
+  background: transparent;
+}
+
+</style>
+
+<div class='row'>
+  <% @bars.each do |bar| %>
+    <div class="card card--big col-md-4">
+      <div style="background-image: url(<%= bar.image_url %>)" class="card__image"></div>
+      <h2 class="card__title"><%= bar.name %></h2><span class="card__subtitle">By Mattia Astorino</span>
+      <p class="card__text"><%= bar.address %> <br> <%= bar.email %> - <%= bar.phone %></p>
+      <div class="card__action-bar">
+        <%= link_to '<button class="card__button">LEARN MORE</button>'.html_safe, bar_path(bar) %>
+      </div>
+    </div>
+  <% end %>
+</div>
