@@ -1,28 +1,5 @@
-== README
+== Olympia
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Olympia is a social app to interact with connationals during international sport events such as Olympic games or World Cup. Users can discover nearby bars that show their country game, connect with others to watch it together and play a pick 'em game to win free drinks and gear from bars.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The app was developed in 24h at the Tor Vergata hackathon.
